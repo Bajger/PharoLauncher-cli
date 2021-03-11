@@ -24,7 +24,5 @@ BaselineOfPharoLauncherCli >> baseline: spec [
 BaselineOfPharoLauncherCli >> baselineOfClap: spec [
 	spec
 		baseline: 'Clap'
-		with: [ spec
-				loads: #('Clap');
-				repository: 'github://cdlm/clap-st/src' ]
+		with: [ spec repository: 'github://cdlm/clap-st/src' ]
 ]
