@@ -10,4 +10,5 @@ BaselineOfPharoLauncherCli >> baseline: spec [
 	spec
 		for: #common
 		do: [ "Packages" spec package: 'PharoLauncher-cli' ]
+		
 ]
