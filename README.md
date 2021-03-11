@@ -2,7 +2,7 @@
 Experimental project (so far) attempting to provide command line interface for Pharo Launcher, without UI.
 
 # CLI interface design, plans
-Actual description of CLI interface for Pharo Launcher, plan of how to implement can be found here: TODO. 
+Actual description of CLI interface for Pharo Launcher, plan of how to implement can be found in: [Pharo Launcher CLI description](PharoLauncherCmdLine-description.md). 
 
 # How to load
 work-in-progress  
