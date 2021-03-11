@@ -9,7 +9,7 @@ work-in-progress
 You can load this project into stable Pharo 8.0 (P9 untested) image using:  
 ```
 Metacello new
-	repository: 'github://Bajger/PharoLauncher-cli/src';
+	repository: 'github://Bajger/PharoLauncher-cli:main/src';
 	baseline: 'PharoLauncherCli';
 	load
 ```
