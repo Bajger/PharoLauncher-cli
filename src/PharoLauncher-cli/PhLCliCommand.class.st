@@ -3,42 +3,47 @@ I represent Pharo Launcher root command line command - entry point for invoking 
 I use CLAP for interacting with command line (inherit behavior from ClapApplication).
 "
 Class {
-	#name : #PhLRootCliCommand,
+	#name : #PhLCliCommand,
 	#superclass : #ClapApplication,
 	#category : #'PharoLauncher-cli'
 }
 
 { #category : #'command line - converting' }
-PhLRootCliCommand class >> asCliCommand [
+PhLCliCommand class >> asCliCommand [
 
 	self subclassResponsibility 
 ]
 
 { #category : #'command line' }
-PhLRootCliCommand class >> launcherCommand [
+PhLCliCommand class >> launcherCommand [
 	"Root command for Pharo Launcher"
 
 	<commandline>
 	^ (ClapCommand id: #launcher)
-		description: 'Pharo Launcher - root command';
+		description: self launcherDescription;
 		add: ClapFlag forHelp;
 		addAll: self launcherSubcommands;
 		meaning: [ :args |
 			args at: #helpFlag ifPresent: [ :help |
 				help value; exitSuccess ].
-			args validateAll ];
-		yourself 
+			args validateAll.
+			(self with: args) execute ];
+		yourself
+]
+
+{ #category : #'command line - description' }
+PhLCliCommand class >> launcherDescription [
+	^ 'This is command line interface of Pharo Launcher. Create Pharo image from remote site template, lauch Pharo, eventually delete image, update VMs, etc.'
 ]
 
 { #category : #'command line - subcommands' }
-PhLRootCliCommand class >> launcherSubcommands [
+PhLCliCommand class >> launcherSubcommands [
 
 	^ self subclasses collect: #asCliCommand
 ]
 
 { #category : #'as yet unclassified' }
-PhLRootCliCommand >> execute [ 
+PhLCliCommand >> execute [ 
 
-	"Do nothing for now"
-	^ 'foo'
+	self halt: arguments
 ]

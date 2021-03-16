@@ -1,6 +1,6 @@
 Class {
 	#name : #PhLImageCliCommand,
-	#superclass : #PhLRootCliCommand,
+	#superclass : #PhLCliCommand,
 	#category : #'PharoLauncher-cli'
 }
 
