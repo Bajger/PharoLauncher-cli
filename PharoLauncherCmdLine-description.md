@@ -15,6 +15,7 @@ Purpose of this document is to describe command line interface for Pharo launche
 5. How to display progress (if ever)? This could be useful during downlaod commands, like "INFO: Fetching from remote-site URL..." (dot's added every second, or maybe percentage?).
 
 # Overview of Pharo Laucher commands  
+This is list of subject oriented commands of Pharo launcher, where subjects are Pharo VM, image, configuration of launcher. 
 | Command | Sub-command | Sub-Sub-command | Description | 
 | ------- | ----------- | --------------- | ------------- |
 | `help`  |             | | Prints all supported Pharo launcher commands. |
