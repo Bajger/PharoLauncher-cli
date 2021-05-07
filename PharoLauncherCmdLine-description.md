@@ -16,23 +16,27 @@ Purpose of this document is to describe command line interface for Pharo launche
 
 # Overview of Pharo Laucher commands  
 ## Informative commands
-Command | Sub-command | Sub-Sub-command | Description
-------- | ----------- | --------------- | -----------
-`help`  |             |                 | Prints all supported Pharo launcher commands.
-`vm`    |             |                 | All sub-commands related to VM management.
- | `list`      |                 | Lists all available VMs, with status.
-        | `info`      |                 | Prints information about VM: name, remote-site URL, last update status, etc.
-        -> `update` | Updates VM executable, including depedent libs to latest version from remote site.
-        -> `delete` | Deletes VM executable from local computer, including dependencies.
-`image` | | All sub-commands related to management of local Pharo images.
-        | `list` | Lists all downloaded images on local computer.
-        | `info` | Prints information about image: name, description, origin template, etc.
-        | `launch` | Lauches image with using default (auto-detected) VM.
-        | `create` | Downloads and creates new image on local computer from remote site based on template name.
-        | `delete` | Deletes image from computer, including local image directory content.
-        | `template` | All sub-commands related to templates of Pharo image.
-        | | `list` 
-        | | `categories` 
+| Command | Sub-command | Sub-Sub-command | Description | 
+| ------- | ----------- | --------------- | ------------- |
+| `help`  |             | | Prints all supported Pharo launcher commands. |
+| `vm`    |             | | All sub-commands related to VM management. |
+|         | `list`      | | Lists all available VMs, with status. |
+|         | `info`      | | Prints information about VM: name, remote-site URL, last update status, etc. |
+|         | `update`    | | Updates VM executable, including depedent libs to latest version from remote site. |
+|         | `delete`    | | Deletes VM executable from local computer, including dependencies. |
+| `image` |             | | All sub-commands related to management of local Pharo images. |
+|         | `list`      | | Lists all downloaded images on local computer. |
+|         | `info`      | | Prints information about image: name, description, origin template, etc. |
+|         | `launch`    | | Lauches image with using default (auto-detected) VM. |
+|         | `create`    | | Downloads and creates new image on local computer from remote site based on template name. |
+|         | `copy`      | | Creates copy of given image with new name. 
+|         | `delete`    | | Deletes image from computer, including local image directory content. |
+|         | `template`  | | All sub-commands related to templates of Pharo image. | 
+|         |             | `list` | Lists all image templates. |
+|         |             | `categories` | Lists all image template categories, based on which are image templates categorized. |
+| `configure` | `templateSourcesDir` | | Prints, sets directory path where file with template sources is located. |
+|             | `templateSoucesUrl`  | | Prints, sets https URL, where template sources can be fetched remote site (official). |
+|             | `imageInitScriptsDir` | | Prints, sets directory path, where init scripts for images are located. |
         
         
 `listImages` Lists all downloaded images on local computer.
@@ -54,9 +58,7 @@ Command | Description
 This lists just bare minimum subset of config options for now.
 Command | Description
 ------- | -----------
-`templateSourcesDir` | Prints, sets directory path where file with template sources is located.
-`templateSoucesUrl` | Prints, sets https URL, where template sources can be fetched remote site (official).
-`imageInitScriptsDir` | Prints, sets directory path, where init scripts for images are located.
+`
 
 
 # Description of Pharo Launcher commands  
