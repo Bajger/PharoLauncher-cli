@@ -16,14 +16,14 @@ Purpose of this document is to describe command line interface for Pharo launche
 
 # Overview of Pharo Laucher commands  
 ## Informative commands
-Command | Sub-command | Description
-------- | ----------- | -----------
-`help`  | | Prints all supported Pharo launcher commands.
-`vm`    | | All sub-commands related to VM management
-        | `list` | Lists all available VMs, with status.
-        | `info` |  Prints information about VM: name, remote-site URL, last update status, etc.
-        | `update` | Updates VM executable, including depedent libs to latest version from remote site.
-        | `delete` | Deletes VM executable from local computer, including dependencies.
+Command | Sub-command | Sub-Sub-command | Description
+------- | ----------- | --------------- | -----------
+`help`  |             |                 | Prints all supported Pharo launcher commands.
+`vm`    |             |                 | All sub-commands related to VM management.
+ | `list`      |                 | Lists all available VMs, with status.
+        | `info`      |                 | Prints information about VM: name, remote-site URL, last update status, etc.
+        -> `update` | Updates VM executable, including depedent libs to latest version from remote site.
+        -> `delete` | Deletes VM executable from local computer, including dependencies.
 `image` | | All sub-commands related to management of local Pharo images.
         | `list` | Lists all downloaded images on local computer.
         | `info` | Prints information about image: name, description, origin template, etc.
