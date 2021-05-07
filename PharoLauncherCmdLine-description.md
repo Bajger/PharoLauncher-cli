@@ -28,6 +28,7 @@ This is list of subject oriented commands of Pharo launcher, where subjects are 
 |         | `list`      | | Lists all downloaded images on local computer. |
 |         | `info`      | | Prints information about image: name, description, origin template, etc. |
 |         | `launch`    | | Lauches image with using default (auto-detected) VM. |
+|         | `kill`      | | Force terminate the running Pharo image(s).
 |         | `create`    | | Downloads and creates new image on local computer from remote site based on template name. |
 |         | `copy`      | | Creates copy of given image with new name. 
 |         | `delete`    | | Deletes image from computer, including local image directory content. |
@@ -129,7 +130,7 @@ Options:
 ## Image info command
 Example of use:  
 ```
-$ imageInfo "Pharo 7.0 - 32bit (Exercism new 23"
+$ PharoLauncher-cli imageInfo "Pharo 7.0 - 32bit (Exercism new 23"
 Image name:           Pharo 7.0 - 32bit (Exercism new 23
 Last modified:        2019-10-10T08:34:59+1:00
 Description:          (not available)
