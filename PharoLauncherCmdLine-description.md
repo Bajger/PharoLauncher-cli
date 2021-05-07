@@ -15,7 +15,6 @@ Purpose of this document is to describe command line interface for Pharo launche
 5. How to display progress (if ever)? This could be useful during downlaod commands, like "INFO: Fetching from remote-site URL..." (dot's added every second, or maybe percentage?).
 
 # Overview of Pharo Laucher commands  
-## Informative commands
 | Command | Sub-command | Sub-Sub-command | Description | 
 | ------- | ----------- | --------------- | ------------- |
 | `help`  |             | | Prints all supported Pharo launcher commands. |
@@ -37,29 +36,6 @@ Purpose of this document is to describe command line interface for Pharo launche
 | `configure` | `templateSourcesDir` | | Prints, sets directory path where file with template sources is located. |
 |             | `templateSoucesUrl`  | | Prints, sets https URL, where template sources can be fetched remote site (official). |
 |             | `imageInitScriptsDir` | | Prints, sets directory path, where init scripts for images are located. |
-        
-        
-`listImages` Lists all downloaded images on local computer.
-`listTemplates`  Lists all image templates. 
-`listTemplateCategories`  lists all image template categories, based on which are image templates categorized.
-`imageInfo`  Prints information about image: name, description, origin template, etc.
-`vmInfo` Prints information about VM: name, remote-site URL, last update status, etc.
-
-## Action commands
-Command | Description
-------- | -----------
-`launch` | Lauches image with using default (auto-detected) VM.
-`createImage` | Downloads and creates new image on local computer from remote site based on template name.
-`deleteImage` | Deletes image from computer, including local image directory content.
-`updateVM` | Updates VM executable, including depedent libs to latest version from remote site.
-`deleteVM` | Deletes VM executable from local computer, including dependencies.
-
-## Configuration commands
-This lists just bare minimum subset of config options for now.
-Command | Description
-------- | -----------
-`
-
 
 # Description of Pharo Launcher commands  
 ## Help command  
