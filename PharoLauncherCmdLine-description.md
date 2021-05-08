@@ -38,7 +38,7 @@ This is list of subject oriented commands of Pharo launcher, where subjects are 
 |         |             | `list` | Lists all image templates. |
 |         |             | `categories` | Lists all image template categories, based on which are image templates categorized. |
 |         |             | `sourcesDir` | Prints, sets directory path where file with template sources is located. |
-|         |             | `sourcesUrl`  | | Prints, sets https URL, where template sources can be fetched remote site (official). |
+|         |             | `sourcesUrl`  | Prints, sets https URL, where template sources can be fetched remote site (official). |
 |         | `initScriptsDir` | | Prints, sets directory path, where init scripts for images are located. |
 
 # Description of Pharo Launcher commands  
