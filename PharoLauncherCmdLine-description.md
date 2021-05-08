@@ -16,6 +16,8 @@ Purpose of this document is to describe command line interface for Pharo launche
 
 # Overview of Pharo Laucher commands  
 This is list of subject oriented commands of Pharo launcher, where subjects are Pharo VM, image, configuration of launcher. 
+(launcher parent command is not listed, it is implicit)
+
 | Command | Sub-command | Sub-Sub-command | Description | 
 | ------- | ----------- | --------------- | ------------- |
 | `help`  |             | | Prints all supported Pharo launcher commands. |
