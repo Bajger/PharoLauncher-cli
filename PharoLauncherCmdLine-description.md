@@ -35,9 +35,9 @@ This is list of subject oriented commands of Pharo launcher, where subjects are 
 |         | `template`  | | All sub-commands related to templates of Pharo image. | 
 |         |             | `list` | Lists all image templates. |
 |         |             | `categories` | Lists all image template categories, based on which are image templates categorized. |
-| `configure` | `templateSourcesDir` | | Prints, sets directory path where file with template sources is located. |
-|             | `templateSoucesUrl`  | | Prints, sets https URL, where template sources can be fetched remote site (official). |
-|             | `imageInitScriptsDir` | | Prints, sets directory path, where init scripts for images are located. |
+|         |             | `sourcesDir` | Prints, sets directory path where file with template sources is located. |
+|         |             | `sourcesUrl`  | | Prints, sets https URL, where template sources can be fetched remote site (official). |
+|         | `initScriptsDir` | | Prints, sets directory path, where init scripts for images are located. |
 
 # Description of Pharo Launcher commands  
 ## Help command  
@@ -47,26 +47,8 @@ Common purpose of laucher is to create Pharo image locally from remote site temp
 
 Usage:  [command] [--help]
 
-Informative commands:
-  help                    Prints all supported commands. Prints help about given command.
-  listVMs                 Lists all available VMs, with status.
-  listImages              Lists all downloaded images on local computer.
-  listTemplates           Lists all image templates. 
-  listTemplateCategories  Lists all image template categories, based on which are image templates categorized.
-  imageInfo               Prints information about image: name, description, origin template, etc.
-  vmInfo                  Prints information about VM.
-
-Action commands:
-  launch                  Lauches image with using default (auto-detected) VM.
-  createImage             Downloads and creates new image on local computer from remote site based on template name.
-  deleteImage             Deletes image from computer, including local image directory content.
-  updateVM                Updates VM executable on local computer, including depedent libs to latest version from remote site.
-  deleteVM                Deletes VM executable from local computer, including dependencies.
-
-Configuration commands (configuration options of Pharo Launcher):
-  templateSourcesDir      Prints, sets directory path where file with template sources is located.
-  templateSoucesUrl       Prints, sets https URL, where template sources can be fetched remote site (official).
-  imageInitScriptsDir     Prints, sets directory path, where init scripts for images are located.
+Commands:
+TOTO
 
 Options:
 -h, --help                Prints help about this command. 
@@ -87,7 +69,7 @@ Options:
 ## List of VMs command
 Example of use:
 ```
-$ listVMs
+$ vm list
 VM name                 Last Update               Remote URL
 -------                 -----------               ----------                 
 90-x86                  N/A                       https://files.pharo.org/get-files/90/pharo-win-stable.zip
@@ -101,7 +83,7 @@ VM name                 Last Update               Remote URL
 Lists all available VMs, with last update status, remote site URL, from which was VM copied (if ever).
 (N/A status (last update) means that VM is not on local computer available.)
 
-Usage:  listVMs [--help] 
+Usage:  vm list [--help] 
 
 Options:
 -h, --help                Prints help about this command.
@@ -109,7 +91,7 @@ Options:
 ## List images command
 Example of use:  
 ```
-$ listImages
+$ image list
 Image name                                  Architecture          Pharo Version           Last Modified               Last modified (ago)
 ----------                                  ------------          -------------           -------------               -------------------       
 P9-64b-devel                                64                    90                      2021-03-01T12:22:11+1:00    last week
@@ -121,7 +103,7 @@ Pharo 7.0 - 32bit (Exercism new 23)         32                    70            
 Lists all available Pharo images on local computer, with image name, architecture, Pharo version, last modified date.
 Images are ordered by recent modification date.
 
-Usage:  listImages [--help] [--name]
+Usage:  image list [--help] [--name]
 
 Options:
 -h, --help                Prints help about this command.
@@ -130,7 +112,7 @@ Options:
 ## Image info command
 Example of use:  
 ```
-$ PharoLauncher-cli imageInfo "Pharo 7.0 - 32bit (Exercism new 23"
+$ PharoLauncher-cli image info "Pharo 7.0 - 32bit (Exercism new 23"
 Image name:           Pharo 7.0 - 32bit (Exercism new 23
 Last modified:        2019-10-10T08:34:59+1:00
 Description:          (not available)
