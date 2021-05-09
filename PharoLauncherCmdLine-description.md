@@ -34,12 +34,13 @@ This is list of subject oriented commands of Pharo launcher, where subjects are 
 |         | `create`    | | Downloads and creates new image on local computer from remote site based on template name. |
 |         | `copy`      | | Creates copy of given image with new name. 
 |         | `delete`    | | Deletes image from computer, including local image directory content. |
-|         | `template`  | | All sub-commands related to templates of Pharo image. | 
-|         |             | `list` | Lists all image templates. |
-|         |             | `categories` | Lists all image template categories, based on which are image templates categorized. |
-|         |             | `sourcesDir` | Prints, sets directory path where file with template sources is located. |
-|         |             | `sourcesUrl`  | Prints, sets https URL, where template sources can be fetched remote site (official). |
 |         | `initScriptsDir` | | Prints, sets directory path, where init scripts for images are located. |
+| `template` |          | | All sub-commands related to templates of Pharo image. | 
+|         | `list`      | | Lists all image templates. |
+|         | `categories`| | Lists all image template categories, based on which are image templates categorized. |
+|         | `sourcesDir` | | Prints, sets directory path where file with template sources is located. |
+|         | `sourcesUrl` | | Prints, sets https URL, where template sources can be fetched remote site (official). |
+
 
 # Description of Pharo Launcher commands  
 ## Help command  
