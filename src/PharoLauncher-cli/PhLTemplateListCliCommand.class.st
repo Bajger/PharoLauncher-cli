@@ -3,3 +3,9 @@ Class {
 	#superclass : #PhLTemplateCliCommand,
 	#category : #'PharoLauncher-cli'
 }
+
+{ #category : #'command line - converting' }
+PhLTemplateListCliCommand class >> asCliCommand [
+
+	^ self newLauncherCommand: #list
+]
