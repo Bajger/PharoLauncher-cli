@@ -9,3 +9,9 @@ PhLTemplateCliCommand class >> asCliCommand [
 
 	^ self newLauncherCommand: #template
 ]
+
+{ #category : #'command line - description' }
+PhLTemplateCliCommand class >> launcherCmdDescription [
+
+	^ 'All sub-commands related to image templates.'
+]

@@ -5,6 +5,9 @@ I use CLAP for interacting with command line (inherit behavior from ClapApplicat
 Class {
 	#name : #PhLCliCommand,
 	#superclass : #ClapApplication,
+	#instVars : [
+		'outStream'
+	],
 	#category : #'PharoLauncher-cli'
 }
 
@@ -31,6 +34,12 @@ PhLCliCommand class >> launcherCmdPositionals [
 	^ #()
 ]
 
+{ #category : #'command line - subcommands' }
+PhLCliCommand class >> launcherCmdSubcommands [
+
+	^ self subclasses collect: #asCliCommand
+]
+
 { #category : #'command line - instance creation' }
 PhLCliCommand class >> launcherCommand [
 	"Root command for Pharo Launcher"
@@ -44,12 +53,6 @@ PhLCliCommand class >> launcherDescription [
 	^ 'This is command line interface of Pharo Launcher. Create Pharo image from remote site template, lauch Pharo, eventually delete image, update VMs, etc.'
 ]
 
-{ #category : #'command line - subcommands' }
-PhLCliCommand class >> launcherSubcommands [
-
-	^ self subclasses collect: #asCliCommand
-]
-
 { #category : #'command line - instance creation' }
 PhLCliCommand class >> newLauncherCommand: idOfCommand [ 
 	"factory for pharo launcher commands"
@@ -61,15 +64,22 @@ PhLCliCommand class >> newLauncherCommand: idOfCommand [
 		addAll: self launcherCmdFlags;
 		addAll: self launcherCmdPositionals;
 		meaning: [ :args |
+			args validateAll.
 			args at: #helpFlag ifPresent: [ :help |
 				help value; exitSuccess ].
-			args validateAll.
 			(self with: args) execute ];
 		yourself
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #'command execution' }
 PhLCliCommand >> execute [ 
 	
-	^ self exitSuccess.
+	^ self context exitSuccess.
+]
+
+{ #category : #'private ' }
+PhLCliCommand >> outStream [ 
+
+	self flag: 'TODO: Test behavior of outstream (instance of VTermOutputDriver on Windows 10).'.
+	^ outStream ifNil: [ outStream := VTermOutputDriver on: arguments context stdout ]
 ]
