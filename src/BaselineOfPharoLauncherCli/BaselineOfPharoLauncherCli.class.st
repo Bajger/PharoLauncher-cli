@@ -15,14 +15,14 @@ BaselineOfPharoLauncherCli >> baseline: spec [
 			
 			"Packages" 
 			spec 
-				package: 'PharoLauncher-cli' with: [ spec requires: #('Clap')];
-				package: 'PharoLauncher-cli-Tests' with: [ spec requires: #('PharoLauncher-cli') ].
+				package: 'PharoLauncher-cli-restructured' with: [ spec requires: #('Clap')];
+				package: 'PharoLauncher-cli-restructured-Tests' with: [ spec requires: #('PharoLauncher-cli-restructured') ].
 
 			"groups"
 			spec
 				group: 'default' with: #('Development');
-				group: 'Tests' with: 'PharoLauncher-cli-Tests';
-				group: 'Deployment' with: 'PharoLauncher-cli';
+				group: 'Tests' with: 'PharoLauncher-cli-Tests-restructured';
+				group: 'Deployment' with: 'PharoLauncher-cli-restructured';
 				group: 'Development' with: #('Deployment' 'Tests')
 		]
 ]

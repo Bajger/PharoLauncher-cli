@@ -1,7 +1,7 @@
 Class {
 	#name : #PhLVmListCliCommand,
 	#superclass : #PhLVmCliCommand,
-	#category : #'PharoLauncher-cli'
+	#category : #'PharoLauncher-cli-restructured-PharoLauncher-cli-restructured'
 }
 
 { #category : #'command line - converting' }

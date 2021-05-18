@@ -1,6 +1,14 @@
 "
 I represent Pharo Launcher root command line command - entry point for invoking PharoLauncher from cmd line. 
-I use CLAP for interacting with command line (inherit behavior from ClapApplication).
+
+I use: 
+ - CLAP for interacting with command line (inherit behavior from ClapApplication).
+
+I declare: 
+- outStream for printing command line output
+
+I execute:
+- just printing help about my sub-commands relevant for Pharo Launcher
 "
 Class {
 	#name : #PhLCliCommand,
@@ -8,7 +16,7 @@ Class {
 	#instVars : [
 		'outStream'
 	],
-	#category : #'PharoLauncher-cli'
+	#category : #'PharoLauncher-cli-restructured-PharoLauncher-cli-restructured'
 }
 
 { #category : #'command line - converting' }
@@ -22,7 +30,7 @@ PhLCliCommand class >> launcherCmdDescription [
 	^ 'This is command line interface of Pharo Launcher. Create Pharo image from remote site template, lauch Pharo, eventually delete image, update VMs, etc.'
 ]
 
-{ #category : #'command line - flags' }
+{ #category : #'command line - arguments' }
 PhLCliCommand class >> launcherCmdFlags [
 
 	^ #()

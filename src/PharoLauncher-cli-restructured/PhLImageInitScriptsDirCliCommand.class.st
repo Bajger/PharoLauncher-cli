@@ -1,7 +1,7 @@
 Class {
 	#name : #PhLImageInitScriptsDirCliCommand,
 	#superclass : #PhLImageCliCommand,
-	#category : #'PharoLauncher-cli'
+	#category : #'PharoLauncher-cli-restructured-PharoLauncher-cli-restructured'
 }
 
 { #category : #'command line' }

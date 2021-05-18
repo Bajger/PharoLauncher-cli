@@ -1,7 +1,7 @@
 Class {
 	#name : #PhLTemplateListCliCommand,
 	#superclass : #PhLTemplateCliCommand,
-	#category : #'PharoLauncher-cli'
+	#category : #'PharoLauncher-cli-restructured-PharoLauncher-cli-restructured'
 }
 
 { #category : #'command line - converting' }
