@@ -20,11 +20,11 @@ PhLCliCommandTest >> testMatchImageCopy [
 	"test just match of command line args, without activating command"
 	
 	self assert: (PhLCliCommand launcherCommand match: #('launcher' 'image' 'copy')) isValid.
-	self assert: (PhLCliCommand launcherCommand match: #('launcher' 'image' 'copy' 'blah')) isValid.
-	self assert: (PhLCliCommand launcherCommand match: #('launcher' 'image' 'copy' 'blah' '-n' 'myNewName')) isValid.
-	self assert: (PhLCliCommand launcherCommand match: #('launcher' 'image' 'copy' 'blah' '--newImageName' 'myNewName')) isValid.
+	self assert: (PhLCliCommand launcherCommand match: #('launcher' 'image' 'copy' 'existingImage')) isValid.
+	self assert: (PhLCliCommand launcherCommand match: #('launcher' 'image' 'copy' 'existingImage' 'newImage')) isValid.
 	
 	self deny: (PhLCliCommand launcherCommand match: #('launcher' 'image' 'copy' 'blah' '--nonsense' 'myNewName')) isValid.
+	self deny: (PhLCliCommand launcherCommand match: #('launcher' 'image' 'copy' 'some' 'totally' 'random' 'stuff')) isValid.
 ]
 
 { #category : #tests }

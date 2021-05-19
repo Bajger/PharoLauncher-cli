@@ -21,7 +21,7 @@ BaselineOfPharoLauncherCli >> baseline: spec [
 			"groups"
 			spec
 				group: 'default' with: #('Development');
-				group: 'Tests' with: 'PharoLauncher-cli-Tests-restructured';
+				group: 'Tests' with: 'PharoLauncher-cli-restructured-Tests';
 				group: 'Deployment' with: 'PharoLauncher-cli-restructured';
 				group: 'Development' with: #('Deployment' 'Tests')
 		]

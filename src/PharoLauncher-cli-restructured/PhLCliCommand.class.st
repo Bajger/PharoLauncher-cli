@@ -69,8 +69,8 @@ PhLCliCommand class >> newLauncherCommand: idOfCommand [
 		description: self launcherCmdDescription;
 		add: ClapFlag forHelp;
 		addAll: self launcherCmdSubcommands;
-		addAll: self launcherCmdFlags;
 		addAll: self launcherCmdPositionals;
+		addAll: self launcherCmdFlags;
 		meaning: [ :args |
 			args validateAll.
 			args at: #helpFlag ifPresent: [ :help |

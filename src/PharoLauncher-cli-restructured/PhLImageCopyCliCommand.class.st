@@ -40,8 +40,15 @@ PhLImageCopyCliCommand class >> launcherCmdFlags [
 { #category : #'command line - arguments' }
 PhLImageCopyCliCommand class >> launcherCmdPositionals [
 
-	^ {(ClapPositional id: #imageName)
+	^ {((ClapPositional id: #existingImageName)
 				description: 'Local image name to be copied.';
 					meaning: [ :pos | pos  asString ];
-					implicitMeaning: [ :arg :app | app  ]}
+					implicitMeaning: [ :arg :app | app  ];
+					yourself).
+		((ClapPositional id: #newImageName)
+				description: 'New image name of a copied image.';
+					meaning: [ :pos | pos  asString ];
+					implicitMeaning: [ :arg :app | app  ];
+					yourself)	
+	}
 ]
