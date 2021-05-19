@@ -13,7 +13,7 @@ I execute:
 Class {
 	#name : #PhLImageCliCommand,
 	#superclass : #PhLCliCommand,
-	#category : #'PharoLauncher-cli-restructured-PharoLauncher-cli-restructured'
+	#category : #'PharoLauncher-cli-restructured'
 }
 
 { #category : #'command line' }

@@ -11,11 +11,17 @@ I execute:
 Class {
 	#name : #PhLImageInfoCliCommand,
 	#superclass : #PhLImageCliCommand,
-	#category : #'PharoLauncher-cli-restructured-PharoLauncher-cli-restructured'
+	#category : #'PharoLauncher-cli-restructured'
 }
 
 { #category : #'command line' }
 PhLImageInfoCliCommand class >> asCliCommand [
 
 	^ self newLauncherCommand: #info
+]
+
+{ #category : #'command line' }
+PhLImageInfoCliCommand class >> launcherCmdDescription [
+
+	^ 'Prints information about image: name, description, origin template, etc.'
 ]

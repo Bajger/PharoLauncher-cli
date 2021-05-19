@@ -10,11 +10,17 @@ I execute:
 Class {
 	#name : #PhLImageListCliCommand,
 	#superclass : #PhLImageCliCommand,
-	#category : #'PharoLauncher-cli-restructured-PharoLauncher-cli-restructured'
+	#category : #'PharoLauncher-cli-restructured'
 }
 
 { #category : #'command line' }
 PhLImageListCliCommand class >> asCliCommand [
 
 	^ self newLauncherCommand: #list
+]
+
+{ #category : #'command line' }
+PhLImageListCliCommand class >> launcherCmdDescription [
+
+	^ 'Lists all downloaded images on local computer.'
 ]

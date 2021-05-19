@@ -11,13 +11,19 @@ I execute:
 Class {
 	#name : #PhLImageCopyCliCommand,
 	#superclass : #PhLImageCliCommand,
-	#category : #'PharoLauncher-cli-restructured-PharoLauncher-cli-restructured'
+	#category : #'PharoLauncher-cli-restructured'
 }
 
 { #category : #'command line' }
 PhLImageCopyCliCommand class >> asCliCommand [
 
 	^ self newLauncherCommand: #copy
+]
+
+{ #category : #'command line' }
+PhLImageCopyCliCommand class >> launcherCmdDescription [
+
+	^ 'Creates copy of given image with new name.'
 ]
 
 { #category : #'command line - arguments' }

@@ -10,11 +10,17 @@ I execute:
 Class {
 	#name : #PhLImageLaunchCliCommand,
 	#superclass : #PhLImageCliCommand,
-	#category : #'PharoLauncher-cli-restructured-PharoLauncher-cli-restructured'
+	#category : #'PharoLauncher-cli-restructured'
 }
 
 { #category : #'command line' }
 PhLImageLaunchCliCommand class >> asCliCommand [
 
 	^ self newLauncherCommand: #launch
+]
+
+{ #category : #'command line' }
+PhLImageLaunchCliCommand class >> launcherCmdDescription [
+
+	^ 'Lauches image with using default (auto-detected) VM.'
 ]

@@ -16,7 +16,7 @@ Class {
 	#instVars : [
 		'outStream'
 	],
-	#category : #'PharoLauncher-cli-restructured-PharoLauncher-cli-restructured'
+	#category : #'PharoLauncher-cli-restructured'
 }
 
 { #category : #'command line - converting' }

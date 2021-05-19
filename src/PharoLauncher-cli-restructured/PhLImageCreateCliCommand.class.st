@@ -11,11 +11,17 @@ I execute:
 Class {
 	#name : #PhLImageCreateCliCommand,
 	#superclass : #PhLImageCliCommand,
-	#category : #'PharoLauncher-cli-restructured-PharoLauncher-cli-restructured'
+	#category : #'PharoLauncher-cli-restructured'
 }
 
 { #category : #'command line' }
 PhLImageCreateCliCommand class >> asCliCommand [
 
 	^ self newLauncherCommand: #create
+]
+
+{ #category : #'command line' }
+PhLImageCreateCliCommand class >> launcherCmdDescription [
+
+	^ 'Downloads and creates new image on local computer from remote site based on template name.'
 ]

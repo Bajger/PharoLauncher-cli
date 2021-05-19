@@ -10,11 +10,17 @@ I execute:
 Class {
 	#name : #PhLImageDeleteCliCommand,
 	#superclass : #PhLImageCliCommand,
-	#category : #'PharoLauncher-cli-restructured-PharoLauncher-cli-restructured'
+	#category : #'PharoLauncher-cli-restructured'
 }
 
 { #category : #'command line' }
 PhLImageDeleteCliCommand class >> asCliCommand [
 
 	^ self newLauncherCommand: #delete
+]
+
+{ #category : #'command line' }
+PhLImageDeleteCliCommand class >> launcherCmdDescription [
+
+	^ 'Deletes image from computer, including local image directory content.'
 ]
